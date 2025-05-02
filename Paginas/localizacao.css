@@ -1,0 +1,83 @@
+/* Reset de estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f8c010; /* Amarelo */
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 150px;
+}
+
+/* Navegação */
+nav {
+    background-color: #d10f00; /* Vermelho */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Conteúdo da Página Localização */
+#localizacao {
+    padding: 40px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#localizacao h1 {
+    color: #d10f00; /* Vermelho */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#localizacao p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Mapa */
+.mapa {
+    margin-top: 30px;
+}
+
+.mapa iframe {
+    width: 80%;
+    height: 400px;
+    border: 0;
+    margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f8c010; /* Amarelo */
+    text-align: center;
+    padding: 10px;
+}
