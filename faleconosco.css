@@ -1,0 +1,163 @@
+/* Reset e layout principal */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Faz o conteúdo crescer e empurrar o footer para o final */
+main {
+    flex: 1;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f8c010;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 150px;
+}
+
+/* Navegação */
+nav {
+    background-color: #d10f00; /* Vermelho */
+    padding: 1px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.frase-destaque {
+    font-size: 1.2em;
+    color: #d10f00;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Conteúdo da Página Fale Conosco */
+#faleconosco {
+    padding: 40px;
+    background-color: white;
+    color: #333;
+    text-align: center;
+}
+
+#faleconosco h1 {
+    color: #d10f00;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#faleconosco p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Formulário de Contato */
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-contato label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-contato button {
+    background-color: #d10f00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.form-contato button:hover {
+    background-color: #b10c00;
+}
+
+/* Contato via WhatsApp */
+.contato-whatsapp {
+    margin-top: 50px;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contato-whatsapp h2 {
+    color: #d10f00;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.botoes-whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botao-whatsapp {
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* Rodapé sempre no fundo */
+footer {
+    background-color: #f8c010;
+    text-align: center;
+    padding: 10px;
+}
