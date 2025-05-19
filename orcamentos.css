@@ -19,7 +19,9 @@ header {
 }
 
 header img {
-    max-width: 150px;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
 }
 
 /* Navegação */
@@ -31,30 +33,42 @@ nav {
 
 nav ul {
     list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    background-color: #b70c00;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff2a2a;
 }
 
 /* Conteúdo da Página Orçamento */
 #orcamentos {
-    padding: 40px;
+    padding: 40px 20px;
     background-color: #fff;
     color: #333;
     text-align: center;
 }
 
 #orcamentos h1 {
-    color: #d10f00; /* Vermelho */
-    font-size: 2.5em;
+    color: #d10f00;
+    font-size: 2.2em;
     margin-bottom: 20px;
 }
 
@@ -91,22 +105,56 @@ nav ul li a {
 }
 
 .form-orcamento button {
-    background-color: #d10f00; /* Vermelho */
+    background-color: #d10f00;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     font-size: 1.1em;
     cursor: pointer;
+    width: 100%;
 }
 
 .form-orcamento button:hover {
-    background-color: #b10c00; /* Vermelho mais escuro */
+    background-color: #b10c00;
 }
 
 /* Rodapé */
 footer {
-    background-color: #f8c010; /* Amarelo */
+    background-color: #f8c010;
     text-align: center;
     padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #orcamentos {
+        padding: 20px 10px;
+    }
+
+    #orcamentos h1 {
+        font-size: 1.8em;
+    }
+
+    .form-orcamento {
+        padding: 15px;
+    }
+
+    header img {
+        max-width: 90%;
+    }
 }

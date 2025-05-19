@@ -19,7 +19,9 @@ header {
 }
 
 header img {
-    max-width: 150px;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
 }
 
 /* Navegação */
@@ -31,22 +33,34 @@ nav {
 
 nav ul {
     list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    background-color: #b70c00;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff2a2a;
 }
 
 /* Conteúdo da Página Produtos */
 #produtos {
-    padding: 40px;
+    padding: 40px 20px;
     background-color: #fff;
     color: #333;
     text-align: center;
@@ -54,7 +68,7 @@ nav ul li a {
 
 #produtos h1 {
     color: #d10f00; /* Vermelho */
-    font-size: 2.5em;
+    font-size: 2.2em;
     margin-bottom: 20px;
 }
 
@@ -66,8 +80,9 @@ nav ul li a {
 /* Lista de Produtos */
 .produto-lista {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .produto-item {
@@ -75,8 +90,8 @@ nav ul li a {
     padding: 20px;
     border: 1px solid #ddd;
     width: 250px;
-    margin: 10px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .produto-item img {
@@ -86,7 +101,7 @@ nav ul li a {
 
 .produto-item h2 {
     color: #d10f00; /* Vermelho */
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-top: 15px;
 }
 
@@ -113,4 +128,37 @@ footer {
     background-color: #f8c010; /* Amarelo */
     text-align: center;
     padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #produtos {
+        padding: 20px 10px;
+    }
+
+    #produtos h1 {
+        font-size: 1.8em;
+    }
+
+    .produto-item {
+        width: 90%; /* Ajusta o tamanho dos cards no celular */
+    }
+
+    header img {
+        max-width: 90%;
+    }
 }

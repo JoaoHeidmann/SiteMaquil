@@ -24,31 +24,46 @@ header {
 }
 
 header img {
-    max-width: 150px;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
 }
 
 /* Navegação */
 nav {
     background-color: #d10f00; /* Vermelho */
-    padding: 1px;
+    padding: 10px;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    background-color: #b70c00;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: #ff2a2a;
+}
+
+/* Frase destaque */
 .frase-destaque {
     font-size: 1.2em;
     color: #d10f00;
@@ -56,10 +71,9 @@ nav ul li a {
     font-weight: bold;
 }
 
-
 /* Conteúdo da Página Fale Conosco */
 #faleconosco {
-    padding: 40px;
+    padding: 40px 20px;
     background-color: white;
     color: #333;
     text-align: center;
@@ -160,4 +174,49 @@ footer {
     background-color: #f8c010;
     text-align: center;
     padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajuste no formulário */
+    .form-contato {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-contato input,
+    .form-contato textarea {
+        font-size: 1em;
+    }
+
+    /* Ajuste na navegação */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajuste nas imagens de cabeçalho */
+    header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes no WhatsApp */
+    .botoes-whatsapp {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botao-whatsapp {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustes no título de contato */
+    .contato-whatsapp h2 {
+        font-size: 1.8em;
+    }
 }

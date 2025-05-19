@@ -19,7 +19,9 @@ header {
 }
 
 header img {
-    max-width: 150px;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
 }
 
 /* Navegação */
@@ -31,17 +33,29 @@ nav {
 
 nav ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    display: inline-block;
+    background-color: #b70c00;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff2a2a;
 }
 
 /* Conteúdo */
@@ -55,4 +69,28 @@ footer {
     background-color: #f8c010; /* Amarelo */
     text-align: center;
     padding: 10px;
+}
+
+/* Responsividade: telas menores que 768px */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    header img {
+        max-width: 90%;
+    }
 }
