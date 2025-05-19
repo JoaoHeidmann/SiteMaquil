@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    padding-bottom: 50px; /* Espaço para o footer fixo */
 }
 
 /* Cabeçalho */
@@ -74,33 +75,57 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.lista-fornecedores ul {
-    list-style: none;
-    padding: 0;
+/* Container dos Fornecedores */
+.fornecedores-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.lista-fornecedores ul li {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    padding: 15px;
+/* Cada fornecedor */
+.fornecedor {
+    text-align: center;
+    width: 180px; /* Ajusta a largura dos fornecedores */
+    transition: transform 0.3s ease;
+}
+
+.fornecedor:hover {
+    transform: scale(1.05); /* Aumenta um pouco ao passar o mouse */
+}
+
+.fornecedor a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.fornecedor img {
+    width: 120px; /* Imagem menor */
+    height: 120px; /* Imagem menor */
+    border-radius: 50%;
     margin-bottom: 10px;
-    text-align: left;
+    border: 2px solid #ddd;
 }
 
-.lista-fornecedores ul li h3 {
-    color: #d10f00; /* Vermelho */
-    font-size: 1.8em;
-    margin-bottom: 10px;
+.fornecedor h3 {
+    font-size: 1.1em;
+    color: #d10f00;
+    margin-bottom: 5px;
 }
 
-.lista-fornecedores ul li p {
+.fornecedor p {
     font-size: 1em;
     color: #333;
 }
 
-/* Rodapé */
+/* Rodapé fixo */
 footer {
     background-color: #f8c010; /* Amarelo */
     text-align: center;
     padding: 10px;
+    position: fixed; /* Fixa o rodapé no final */
+    bottom: 0; /* Posiciona no fundo da tela */
+    width: 100%; /* Largura total */
+    left: 0; /* Alinha ao lado esquerdo */
 }

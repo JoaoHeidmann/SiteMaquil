@@ -9,6 +9,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    min-height: 100vh; /* Garantir que o corpo ocupe 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Cabeçalho */
@@ -50,6 +53,7 @@ nav ul li a {
     background-color: #fff;
     color: #333;
     text-align: center;
+    flex-grow: 1; /* Permite que o conteúdo ocupe o restante da altura disponível */
 }
 
 #localizacao h1 {
@@ -77,7 +81,7 @@ nav ul li a {
 
 /* Rodapé */
 footer {
-    background-color: #f8c010; /* Amarelo */
+    background-color: #f8c010;
     text-align: center;
     padding: 10px;
 }

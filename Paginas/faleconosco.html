@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale Conosco - Maquil</title>
-    <link rel="stylesheet" href="/Paginas/faleconosco.css"> <!-- Caminho para o CSS -->
+    <link rel="stylesheet" href="/Paginas/faleconosco.css">
 </head>
 <body>
 
@@ -19,7 +19,6 @@
             <li><a href="../Paginas/produtos.html">Produtos</a></li>
             <li><a href="../Paginas/localizacao.html">Localização</a></li>
             <li><a href="../Paginas/fornecedores.html">Fornecedores</a></li>
-            <li><a href="../Paginas/cadastro.html">Cadastro</a></li>
             <li><a href="../Paginas/orcamentos.html">Orçamentos</a></li>
             <li><a href="../Paginas/faleconosco.html">Fale Conosco</a></li>
         </ul>
@@ -27,23 +26,22 @@
 
     <main id="faleconosco">
         <h1>Fale Conosco</h1>
-        <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+        <p>Entre em contato conosco, é sempre bom poder atendê-lo!</p>
 
-        <form action="#" method="post" class="form-contato">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+        <!-- Seção de Contato via WhatsApp -->
+        <section class="contato-whatsapp">
+            <h2>Contato via WhatsApp</h2>
+            <p>Escolha com qual vendedor você gostaria de falar:</p>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="assunto">Assunto:</label>
-            <input type="text" id="assunto" name="assunto" required>
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-            <button type="submit">Enviar Mensagem</button>
-        </form>
+            <div class="botoes-whatsapp">
+                <a href="https://wa.me/5527997551385" target="_blank" class="botao-whatsapp">Falar com a Loja</a>
+                <a href="https://wa.me/5527999997009" target="_blank" class="botao-whatsapp">Vendedor - Eduardo</a>
+                <a href="https://wa.me/5527999390038" target="_blank" class="botao-whatsapp">Vendedor - José Ailton</a>
+                <a href="https://wa.me/5527999390035" target="_blank" class="botao-whatsapp">Vendedor - Wallace</a>
+                <a href="https://wa.me/5527997463315" target="_blank" class="botao-whatsapp">Vendedor - Gilmar</a>
+                <a href="https://wa.me/5527996251238" target="_blank" class="botao-whatsapp">Vendedor - Peixoto</a>
+            </div>
+        </section>
     </main>
 
     <footer>
