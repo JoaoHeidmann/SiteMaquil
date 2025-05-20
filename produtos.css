@@ -1,4 +1,4 @@
-/* Reset de estilo padrão */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +33,6 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -50,7 +49,6 @@ nav ul li a {
     padding: 8px 12px;
     background-color: #b70c00;
     border-radius: 5px;
-    display: inline-block;
     transition: background 0.3s;
 }
 
@@ -58,7 +56,7 @@ nav ul li a:hover {
     background-color: #ff2a2a;
 }
 
-/* Conteúdo da Página Produtos */
+/* Seção de Produtos */
 #produtos {
     padding: 40px 20px;
     background-color: #fff;
@@ -67,31 +65,68 @@ nav ul li a:hover {
 }
 
 #produtos h1 {
-    color: #d10f00; /* Vermelho */
+    color: #d10f00;
     font-size: 2.2em;
     margin-bottom: 20px;
 }
 
-#produtos p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
+.produtos-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
 }
 
-/* Lista de Produtos */
+/* Menu Lateral de Categorias */
+.categorias {
+    width: 200px;
+    text-align: left;
+}
+
+.categorias h3 {
+    color: #d10f00;
+    margin-bottom: 10px;
+}
+
+.categorias ul {
+    list-style: none;
+}
+
+.categorias li {
+    margin-bottom: 10px;
+}
+
+.categorias button {
+    width: 100%;
+    padding: 8px;
+    background-color: #f8c010;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.categorias button:hover {
+    background-color: #e0a800;
+}
+
+/* Lista e Itens de Produto */
 .produto-lista {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    flex: 1;
+    justify-content: flex-start;
 }
 
 .produto-item {
     background-color: #fff;
-    padding: 20px;
     border: 1px solid #ddd;
-    width: 250px;
+    width: 230px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .produto-item img {
@@ -100,62 +135,45 @@ nav ul li a:hover {
 }
 
 .produto-item h2 {
-    color: #d10f00; /* Vermelho */
-    font-size: 1.4em;
-    margin-top: 15px;
-}
-
-.produto-item p {
-    font-size: 1em;
-    color: #555;
+    color: #d10f00;
+    font-size: 1.1em;
     margin-top: 10px;
-}
-
-.produto-item a {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #f8c010; /* Amarelo */
-    font-weight: bold;
-}
-
-.produto-item a:hover {
-    text-decoration: underline;
 }
 
 /* Rodapé */
 footer {
-    background-color: #f8c010; /* Amarelo */
+    background-color: #f8c010;
     text-align: center;
     padding: 10px;
+    margin-top: 40px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    nav ul {
+    .produtos-container {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
+    .categorias {
         width: 100%;
-        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-    #produtos {
-        padding: 20px 10px;
+    .categorias ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
-    #produtos h1 {
-        font-size: 1.8em;
+    .categorias button {
+        width: auto;
     }
 
     .produto-item {
-        width: 90%; /* Ajusta o tamanho dos cards no celular */
+        width: 90%;
     }
 
     header img {

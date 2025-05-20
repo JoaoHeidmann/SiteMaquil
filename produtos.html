@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Maquil</title>
-    <link rel="stylesheet" href="produtos.css"> <!-- Caminho para o CSS -->
+    <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
 
@@ -26,33 +26,134 @@
 
     <main id="produtos">
         <h1>Produtos</h1>
-        <p>Confira abaixo os nossos produtos:</p>
+        <p>Confira abaixo os nossos produtos por categoria:</p>
 
-        <section class="produto-lista">
-            <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h2>Produto 1</h2>
-                <p>Descrição breve do produto 1.</p>
-                <a href="#">Saiba mais</a>
-            </div>
-            <div class="produto-item">
-                <img src="produto2.jpg" alt="Produto 2">
-                <h2>Produto 2</h2>
-                <p>Descrição breve do produto 2.</p>
-                <a href="#">Saiba mais</a>
-            </div>
-            <div class="produto-item">
-                <img src="produto3.jpg" alt="Produto 3">
-                <h2>Produto 3</h2>
-                <p>Descrição breve do produto 3.</p>
-                <a href="#">Saiba mais</a>
-            </div>
-        </section>
+        <div class="produtos-container">
+
+            <aside class="categorias">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><button onclick="filtrarProdutos('todas')">Todas</button></li>
+                    <li><button onclick="filtrarProdutos('maquinas-eletricas')">Máquinas Elétricas</button></li>
+                    <li><button onclick="filtrarProdutos('ferramentas-manuais')">Ferramentas Manuais</button></li>
+                    <li><button onclick="filtrarProdutos('ferramentas-auto')">Ferramentas Auto</button></li>
+                    <li><button onclick="filtrarProdutos('maquinas-soldas')">Máquinas de Soldas</button></li>
+                    <li><button onclick="filtrarProdutos('ferramentas-corte')">Ferramentas de Corte</button></li>
+                    <li><button onclick="filtrarProdutos('compressores')">Compressores</button></li>
+                    <li><button onclick="filtrarProdutos('ferramentas-pneumaticas')">Ferramentas Pneumáticas</button></li>
+                </ul>
+            </aside>
+
+            <section class="produto-lista">
+                <!--Eletrica-->
+                <div class="produto-item maquinas-eletricas">
+                    <img src="https://br.dewalt.global/LAG/PRODUCT/IMAGES/HIRES/DWE4020B2B/DWE4020_1.jpg?resize=530x530" alt="Máquina Elétrica">
+                    <h2>DWE4020</h2>
+                    <h2>Esmerilhadeira Angular 4-1/2 800W </h2>
+                </div>
+                <div class="produto-item maquinas-eletricas">
+                    <img src="https://br.dewalt.global/LAG/PRODUCT/IMAGES/HIRES/DWD502B2/DWD502_2.jpg?resize=530x530" alt="Máquina Elétrica">
+                    <h2>DWE502</h2>
+                    <h2>Furadeira de Impacto 1/2" 710W</h2>
+                </div>
+
+
+                <!--Manual-->
+                <div class="produto-item ferramentas-manuais">
+                    <img src="https://red.gedore.com.br/wp-content/uploads/2019/11/alicate_universal.png" alt="Ferramenta Manual">
+                    <h2>Alicate universal</h2>
+                </div>
+                    <div class="produto-item ferramentas-manuais">
+                    <img src="https://red.gedore.com.br/wp-content/uploads/2020/04/IMG_3603.jpeg.jpg" alt="Ferramenta Manual">
+                    <h2>Jogo de alicates, 3 peças</h2>
+                </div>
+                    <div class="produto-item ferramentas-manuais">
+                    <img src="https://red.gedore.com.br/wp-content/uploads/2022/06/JG_CHAVES_FIXAS_12_PCS-1024x1024.png" alt="Ferramenta Manual">
+                    <h2>Jogo de chaves fixas</h2>
+                </div>
+
+                <!--Automovel-->
+                <div class="produto-item ferramentas-auto">
+                    <img src="https://www.marcon.ind.br/wp-content/uploads/2021/12/550-ANGULO-4.jpg" alt="Ferramenta Auto">
+                    <h2>Caixa Ferramentas 5 Gavetas</h2>
+                </div>
+                    <div class="produto-item ferramentas-auto">
+                    <img src="https://static.wixstatic.com/media/ee1db7_9bf9eeddfec148aebeced3c7206ccb59~mv2.jpg/v1/crop/x_876,y_176,w_1799,h_2348/fill/w_810,h_1056,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Prensa--Hidr%C3%A1ulica-10-Ton-site.jpg" alt="Ferramenta Auto">
+                    <h2>Prensa Hidráulica 10T</h2>
+                </div>
+                    <div class="produto-item ferramentas-auto">
+                    <img src="https://static.wixstatic.com/media/ee1db7_9f3860e49fec4e0a81a72be3a21500f8~mv2.jpg/v1/crop/x_0,y_5,w_1181,h_876/fill/w_1014,h_752,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Macaco%20Jacar%C3%A9%20Hidr%C3%A1ulico%205%20Ton%20Rodas%20PU%20Ribeiro.jpg" alt="Ferramenta Auto">
+                    <h2>Macaco Jacaré 5T</h2>
+                </div>
+
+                <!--Solda-->
+                <div class="produto-item maquinas-soldas">
+                    <img src="https://www.balmer.com.br/images/produtos/23-12-2020-10-12-20_1_produto_138.jpg" alt="Máquina de Solda">
+                    <h2>Máscara Automática de Solda – MAB 80</h2>
+                </div>
+                    <div class="produto-item maquinas-soldas">
+                    <img src="https://www.balmer.com.br/images/produtos/04-02-2021-03-02-31_1_produto_139.jpg" alt="Máquina de Solda">
+                    <h2>Combo Máquina Inversora de Solda e Máscara - KIT I-MAKE 130</h2>
+                </div>
+                    <div class="produto-item maquinas-soldas">
+                    <img src="https://www.ledan.com.br/slideWF/images/garra-negativa-cabo-ate-95mm2/garra-negativa-cabo-ate-95mm21.jpg" alt="Máquina de Solda">
+                    <h2>Garra Negativa</h2>
+                </div>
+
+                <!--Ferramenta de corte-->
+                <div class="produto-item ferramentas-corte">
+                    <img src="https://www.nortonabrasives.com/sites/mac3-acs-norton/files/styles/636x636/public/2024-10/66252846559-A_227342%20%283%29.webp?itok=w_E_e1Zp" alt="Ferramenta de Corte">
+                    <h2>Disco de Corte BNA 12</h2>
+                </div>
+                    <div class="produto-item ferramentas-corte">
+                    <img src="https://br.toolsworld.com/upload/iblock/1a8/q204yy3zig1y0tew0309jo0r7v4v9hj0/61b40cd1ccf27ce549c45640bced46727df31184_740279_001.jpg.webp" alt="Ferramenta de Corte">
+                    <h2>Disco Flap, GRAO 40</h2>
+                </div>
+
+                <!--Compressor-->
+                <div class="produto-item compressores">
+                    <img src="https://pressurecompressores.com/wp-content/webp-express/webp-images/uploads/2024/12/Storm-300-Protetor-de-plastico-frontal-1024x640.png.webp" alt="Compressor">
+                    <h2>Compressor 100L Pressure</h2>
+                </div>
+                    <div class="produto-item compressores">
+                    <img src="https://pressurecompressores.com/wp-content/webp-express/webp-images/uploads/2024/05/STORM-600250-HEAVY-DUTY-FRONTAL-1-e1714762901430-1024x630.png.webp" alt="Compressor">
+                    <h2>Compressor 250L Heavy Duty Pressure</h2>
+                </div>
+                    <div class="produto-item compressores">
+                    <img src="https://m.media-amazon.com/images/I/51vM2--vLCL._AC_SL1000_.jpg" alt="Compressor">
+                    <h2>Compressor De Ar 20L</h2>
+                </div>
+
+                <!--Ferramenta pneumatica-->
+                <div class="produto-item ferramentas-pneumaticas">
+                    <img src="https://static.wixstatic.com/media/3024be_ce32dc215ff240c9a82b172a3614797d~mv2.jpg/v1/fill/w_594,h_594,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3024be_ce32dc215ff240c9a82b172a3614797d~mv2.jpg" alt="Ferramenta Pneumática">
+                    <h2>Chave de Impacto PRO-150</h2>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Maquil. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function filtrarProdutos(categoria) {
+            const produtos = document.querySelectorAll('.produto-item');
+
+            produtos.forEach(produto => {
+                if (categoria === 'todas') {
+                    produto.style.display = 'block';
+                } else {
+                    if (produto.classList.contains(categoria)) {
+                        produto.style.display = 'block';
+                    } else {
+                        produto.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
